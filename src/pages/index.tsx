@@ -1,8 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+type Props = {
+  title: string
+}
+
+export default function Home({title = 'React Avancado'}: Props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -59,9 +62,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
+          
         </a>
       </footer>
     </div>
