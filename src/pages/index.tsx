@@ -5,9 +5,7 @@ type Props = {
   title: string
 }
 
-const foo = 'bla';
-
-export default function Home({title = 'React Avancado'}: Props) {
+export default function Home({ title = 'React Avancado' }: Props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +16,7 @@ export default function Home({title = 'React Avancado'}: Props) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">React Avancado</a>
+          Welcome to <a href="https://nextjs.org">{title}</a>
         </h1>
 
         <p className={styles.description}>
@@ -64,7 +62,6 @@ export default function Home({title = 'React Avancado'}: Props) {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          
         </a>
       </footer>
     </div>
